@@ -1,5 +1,6 @@
 const CourseCard = props => {
-  const {name, imageUrl, description} = props
+  const {details} = props
+  const {name, imageUrl, description} = details
 
   return (
     <div>
