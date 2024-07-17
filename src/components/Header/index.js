@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import './index.css'
 
-const Header = () => {
+const Header = () => (
   <nav>
     <Link to="/">
       <img
@@ -10,5 +10,5 @@ const Header = () => {
       />
     </Link>
   </nav>
-}
+)
 export default Header

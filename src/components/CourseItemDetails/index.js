@@ -31,13 +31,13 @@ class CourseItemDetails extends Component {
 
     const response = await fetch(apiUrl)
     if (response.ok) {
-      const data = await response.json()
-      const formattedData = data.course_details.map(each => ({
-        id: each.id,
-        name: each.name,
-        imageUrl: each.image_url,
-        description: each.description,
-      }))
+      const each = await response.json()
+      const formattedData = {
+        id: each.course_details.id,
+        name: each.course_details.name,
+        imageUrl: each.course_details.image_url,
+        description: each.course_details.description,
+      }
       this.setState({
         courseDetailsData: formattedData,
         apiStatus: apiConstants.success,
